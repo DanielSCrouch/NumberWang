@@ -1,0 +1,200 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2019  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+# Date created = 12:31:06  March 26, 2020
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		number_whack_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CSEMA5F31C6
+set_global_assignment -name TOP_LEVEL_ENTITY number_whack
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 19.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "12:31:06  MARCH 26, 2020"
+set_global_assignment -name LAST_QUARTUS_VERSION "19.1.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_timing
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
+set_global_assignment -name VHDL_FILE number_whack.vhd
+set_global_assignment -name VHDL_FILE test_bench.vhd
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH test_bench -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_NAME test_bench -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME i1 -section_id test_bench
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME test_bench -section_id test_bench
+set_global_assignment -name EDA_TEST_BENCH_FILE test_bench.vhd -section_id test_bench
+set_global_assignment -name VHDL_FILE clock.vhd
+set_location_assignment PIN_AE12 -to rst
+set_location_assignment PIN_AF14 -to clk
+set_location_assignment PIN_Y21 -to second
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_score[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_lives[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_level[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_countdown[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_countdown[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_countdown[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_countdown[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_countdown[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_countdown[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_countdown[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_countdown
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_level[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_level[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_level[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_level[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_level[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_level[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_level
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_lives[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_lives[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to second
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to rst
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_score[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_score[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_score[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_score[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_score[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_lives[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_number[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_lives[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_number[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_number[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_number[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_number[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_number[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_number[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_number
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_score[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_score
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_lives[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_lives[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_lives
+set_location_assignment PIN_V25 -to disp_countdown[0]
+set_location_assignment PIN_AA28 -to disp_countdown[1]
+set_location_assignment PIN_Y27 -to disp_countdown[2]
+set_location_assignment PIN_AB27 -to disp_countdown[3]
+set_location_assignment PIN_AB26 -to disp_countdown[4]
+set_location_assignment PIN_AA26 -to disp_countdown[5]
+set_location_assignment PIN_AA25 -to disp_countdown[6]
+set_location_assignment PIN_AA24 -to disp_score[0]
+set_location_assignment PIN_Y23 -to disp_score[1]
+set_location_assignment PIN_Y24 -to disp_score[2]
+set_location_assignment PIN_W22 -to disp_score[3]
+set_location_assignment PIN_W24 -to disp_score[4]
+set_location_assignment PIN_V23 -to disp_score[5]
+set_location_assignment PIN_W25 -to disp_score[6]
+set_location_assignment PIN_AD26 -to disp_lives[0]
+set_location_assignment PIN_AC27 -to disp_lives[1]
+set_location_assignment PIN_AD25 -to disp_lives[2]
+set_location_assignment PIN_AC25 -to disp_lives[3]
+set_location_assignment PIN_AB28 -to disp_lives[4]
+set_location_assignment PIN_AB25 -to disp_lives[5]
+set_location_assignment PIN_AB22 -to disp_lives[6]
+set_location_assignment PIN_AB23 -to disp_level[0]
+set_location_assignment PIN_AE29 -to disp_level[1]
+set_location_assignment PIN_AD29 -to disp_level[2]
+set_location_assignment PIN_AC28 -to disp_level[3]
+set_location_assignment PIN_AD30 -to disp_level[4]
+set_location_assignment PIN_AC29 -to disp_level[5]
+set_location_assignment PIN_AC30 -to disp_level[6]
+set_location_assignment PIN_AJ29 -to disp_number[0]
+set_location_assignment PIN_AH29 -to disp_number[1]
+set_location_assignment PIN_AH30 -to disp_number[2]
+set_location_assignment PIN_AG30 -to disp_number[3]
+set_location_assignment PIN_AF29 -to disp_number[4]
+set_location_assignment PIN_AF30 -to disp_number[5]
+set_location_assignment PIN_AD27 -to disp_number[6]
+set_global_assignment -name VHDL_FILE disp_encoder.vhd
+set_global_assignment -name VHDL_FILE keypad.vhd
+set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS ON
+set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
+set_location_assignment PIN_AC20 -to pad_row[0]
+set_location_assignment PIN_AJ20 -to pad_row[1]
+set_location_assignment PIN_AK21 -to pad_row[2]
+set_location_assignment PIN_AD20 -to pad_row[3]
+set_location_assignment PIN_AH17 -to pad_pwr[0]
+set_location_assignment PIN_AE16 -to pad_pwr[1]
+set_location_assignment PIN_AG17 -to pad_pwr[2]
+set_location_assignment PIN_AA19 -to pad_pwr[3]
+set_location_assignment PIN_V18 -to pad_key_show[3]
+set_location_assignment PIN_V17 -to pad_key_show[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to pad_pwr[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to pad_pwr[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to pad_pwr[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to pad_pwr[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to pad_pwr
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to pad_row[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to pad_row[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to pad_row[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to pad_row[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to pad_row
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to pad_key_show[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to pad_key_show[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to pad_key_show[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to pad_key_show[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to pad_key_show
+set_location_assignment PIN_W16 -to pad_key_show[1]
+set_location_assignment PIN_V16 -to pad_key_show[0]
+set_global_assignment -name VHDL_FILE generator.vhd
+set_global_assignment -name VHDL_FILE countdown.vhd
+set_location_assignment PIN_AE27 -to disp_key[1]
+set_location_assignment PIN_AE26 -to disp_key[0]
+set_location_assignment PIN_AE28 -to disp_key[2]
+set_location_assignment PIN_AG27 -to disp_key[3]
+set_location_assignment PIN_AF28 -to disp_key[4]
+set_location_assignment PIN_AG28 -to disp_key[5]
+set_location_assignment PIN_AH28 -to disp_key[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_key[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_key[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_key[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_key[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_key[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_key[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_key[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to disp_key
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
